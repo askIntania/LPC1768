@@ -7,17 +7,22 @@ This work was developed under linux operating system using GNU ARM Eclipse OpenO
 
 ##Configure for eclipse
 1. Install GNU ARM Eclipse plug-ins from the following URL `http://gnuarmeclipse.sourceforge.net/updates`
-2. Goto project->properties
+2. Restart eclipse then create new Empty Project using Cross ARM GCC toolchains.
+3. Goto project->properties
   - Tool Settings
-    - Cross ARM GNU Assembler's Options
-    
-        ```
-        -x assembler-with-cpp -I"/path/to/workspace/HelloLPC1768/include"
-        ```
+    - Target Processor:
+      - cortex-m3
+      - -mthumb
+      - Toolchain default
+    - Optimization: -Os
+      - Message length
+      - 'char' is signed
+      - Function sections
+      - Data sections
     - Cross ARM C Compiler's Options 
       
         ```
-        -I"/path/to/workspace/HelloLPC1768/include" -std=gnu99 -Wbad-function-cast -fgnu89-inline -mcpu=cortex-m3 -mthumb -ffunction-sections -fdata-sections
+        -I"/path/to/workspace/HelloLPC1768/include" -std=gnu99
         ```
     - Cross ARM C Linker's Options
     
@@ -34,11 +39,11 @@ This work was developed under linux operating system using GNU ARM Eclipse OpenO
     - Set path to `/path/to/gcc-arm-none-eabi-5_4-2016q2/bin`   
     - Set prefix as `arm-none-eabi-`
     - In addition, this can be set to associate to the current workspace.
-3. Configure run method (J-Link)
+4. Configure run method (J-Link)
   - Goto Run->Run Configurations..
   - Add new configuration in C/C++ Application 
   - In the Main tab set C/C++ Application to `exec`. This make the eclipse to execute the <b><i>exec</i></b> script which is included in each project. Note the script is used to write the image using the openocd. It is somehow needs to change the name of the binary file to match the compiled one.
-4. Configure debug method (J-Link)
+5. Configure debug method (J-Link)
  - Goto Run->Debug Configurations..
  - Add new configuration in GDB OpenOCD Debugging
  - In the Main tab set C/C++ Application to the compiled executable file.
