@@ -1,0 +1,3 @@
+#!/bin/bash
+ 
+openocd -f interface/jlink.cfg -f target/lpc17xx.cfg -c "program Debug/HelloLPC1768.elf reset exit"
