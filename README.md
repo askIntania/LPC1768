@@ -37,10 +37,10 @@ This work was developed under linux operating system using GNU ARM Eclipse OpenO
 3. Configure run method (J-Link)
   - Goto Run->Run Configurations..
   - Add new configuration in C/C++ Application 
-  - In the Main tab set C/C++ Application to `exec`. This make the eclipse to execute the <i>exec</i> script which is downloaded from this repository. Note that this script is used to write the image using the openocd and the <i>exec</i> script is somehow needed to change the binary file to match the compiled one.
+  - In the Main tab set C/C++ Application to `exec`. This make the eclipse to execute the <b><i>exec</i></b> script which is included in each project. Note the script is used to write the image using the openocd. It is somehow needs to change the name of the binary file to match the compiled one.
 4. Configure debug method (J-Link)
  - Goto Run->Debug Configurations..
  - Add new configuration in GDB OpenOCD Debugging
  - In the Main tab set C/C++ Application to the compiled executable file.
  - In the Debugger tab set Config Options to `-f interface/jlink.cfg -f target/lpc17xx.cfg`.
- * Before debugging the target must be halted first. I do it by manual.
+ * Before debugging, the target must be halted first. I do it manually using the command line.
