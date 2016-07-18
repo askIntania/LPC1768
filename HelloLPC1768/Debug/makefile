@@ -41,7 +41,7 @@ all: HelloLPC1768.elf secondary-outputs
 HelloLPC1768.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Cross ARM C Linker'
-	arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "/home/blacksheep/LPC1768/workspace/HelloLPC1768/ldscripts/LPC17xx.ld" -Xlinker --gc-sections -Wl,-Map,"HelloLPC1768.map" -o "HelloLPC1768.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "/home/blacksheep/LPC1768/HelloLPC1768/ldscripts/LPC17xx.ld" -Xlinker --gc-sections -Wl,-Map,"HelloLPC1768.map" -o "HelloLPC1768.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

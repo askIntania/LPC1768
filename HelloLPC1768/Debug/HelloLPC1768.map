@@ -103,7 +103,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x5e ./src/core_cm3.o
  .debug_macro   0x00000000      0x1df ./src/core_cm3.o
  .debug_line    0x00000000      0x335 ./src/core_cm3.o
- .debug_str     0x00000000     0x3520 ./src/core_cm3.o
+ .debug_str     0x00000000     0x3516 ./src/core_cm3.o
  .comment       0x00000000       0x6f ./src/core_cm3.o
  .debug_frame   0x00000000      0x170 ./src/core_cm3.o
  .ARM.attributes
@@ -502,11 +502,11 @@ LOAD /opt/gcc/gcc-arm-none-eabi-5_4-2016q2/bin/../lib/gcc/arm-none-eabi/5.4.1/ar
  .debug_abbrev  0x00000143      0x106 ./src/startup_LPC17xx.o
  .debug_abbrev  0x00000249       0xce ./src/system_LPC17xx.o
 
-.debug_line     0x00000000      0x744
+.debug_line     0x00000000      0x726
  *(.debug_line)
- .debug_line    0x00000000      0x253 ./src/main.o
- .debug_line    0x00000253      0x25e ./src/startup_LPC17xx.o
- .debug_line    0x000004b1      0x293 ./src/system_LPC17xx.o
+ .debug_line    0x00000000      0x249 ./src/main.o
+ .debug_line    0x00000249      0x254 ./src/startup_LPC17xx.o
+ .debug_line    0x0000049d      0x289 ./src/system_LPC17xx.o
 
 .debug_frame    0x00000000       0xc0
  *(.debug_frame)
@@ -514,14 +514,14 @@ LOAD /opt/gcc/gcc-arm-none-eabi-5_4-2016q2/bin/../lib/gcc/arm-none-eabi/5.4.1/ar
  .debug_frame   0x00000048       0x40 ./src/startup_LPC17xx.o
  .debug_frame   0x00000088       0x38 ./src/system_LPC17xx.o
 
-.debug_str      0x00000000     0x793f
+.debug_str      0x00000000     0x7935
  *(.debug_str)
- .debug_str     0x00000000     0x7464 ./src/main.o
-                               0x75d9 (size before relaxing)
- .debug_str     0x00007464       0xd2 ./src/startup_LPC17xx.o
-                               0x7413 (size before relaxing)
- .debug_str     0x00007536      0x409 ./src/system_LPC17xx.o
-                               0x7763 (size before relaxing)
+ .debug_str     0x00000000     0x745a ./src/main.o
+                               0x75cf (size before relaxing)
+ .debug_str     0x0000745a       0xd2 ./src/startup_LPC17xx.o
+                               0x7409 (size before relaxing)
+ .debug_str     0x0000752c      0x409 ./src/system_LPC17xx.o
+                               0x7759 (size before relaxing)
 
 .debug_loc      0x00000000       0x90
  *(.debug_loc)
